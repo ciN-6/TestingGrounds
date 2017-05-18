@@ -25,6 +25,11 @@ protected:
   UPROPERTY(EditAnywhere, Category = "BlackBoard")
   struct FBlackboardKeySelector Index;
 
+  // Expose Waypoint in the Behavior Tree.
+  UPROPERTY(EditAnywhere, Category = "BlackBoard")
+  struct FBlackboardKeySelector Waypoint;
+
+
 private:
   void GetPatrolPoints();
 };
