@@ -29,7 +29,4 @@ protected:
   UPROPERTY(EditAnywhere, Category = "BlackBoard")
   struct FBlackboardKeySelector Waypoint;
 
-
-private:
-  void GetPatrolPoints();
 };

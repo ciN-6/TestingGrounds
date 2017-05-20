@@ -26,16 +26,10 @@ EBTNodeResult::Type UChooseNextWaypoint::ExecuteTask(UBehaviorTreeComponent& Own
   if (!NextPoint) {
     return EBTNodeResult::Failed; }
 
-  UE_LOG(LogTemp, Warning, TEXT("[%s] Going to Index : %i / %i"),
-    *RouteComponent->GetName(), CurrentIndex, RouteComponent->GetPatrolPointLength());
-
   Blackboard->SetValueAsObject(this->Waypoint.SelectedKeyName, NextPoint);
   
   CurrentIndex = (CurrentIndex + 1) % (RouteComponent->GetPatrolPointLength());
   Blackboard->SetValueAsInt(this->Index.SelectedKeyName, CurrentIndex);
-
-  UE_LOG(LogTemp, Warning, TEXT("Next Index : %i"), CurrentIndex);
-
 
   return EBTNodeResult::Succeeded;
 }

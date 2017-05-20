@@ -5,7 +5,9 @@
 #include "Components/ActorComponent.h"
 #include "PatrolRoute.generated.h"
 
-
+/*
+  Contains the route points and helper to get the points.
+*/
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class TESTINGGROUND_API UPatrolRoute : public UActorComponent
 {
@@ -35,7 +37,7 @@ private:
   * Properties                  *
   ******************************/
 
-  UPROPERTY(EditInstanceOnly, Category = "Patrol")
+  UPROPERTY(EditAnywhere, Category = "Patrol")
   TArray<AActor*> PatrolPoints;
 
 	
