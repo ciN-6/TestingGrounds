@@ -27,5 +27,11 @@ public:
 	FORCEINLINE class USphereComponent* GetCollisionComp() const { return CollisionComp; }
 	/** Returns ProjectileMovement subobject **/
 	FORCEINLINE class UProjectileMovementComponent* GetProjectileMovement() const { return ProjectileMovement; }
+
+  UPROPERTY(EditDefaultsOnly, Category = "Setup")
+  float initialSpeed = 3000.f;
+
+  UPROPERTY(EditDefaultsOnly, Category = "Setup")
+  float maxSpeed = 3000.f;
 };
 
